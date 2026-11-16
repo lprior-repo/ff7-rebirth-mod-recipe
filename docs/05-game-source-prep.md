@@ -21,7 +21,7 @@ for each mesh:
     report vertices with > 8 influences and total weight mass that would be lost
 flag any Armature modifier using dual-quaternion (engine skins linearly)
 delete everything not kept (lights, cameras, helpers)
-set unit scale 0.01
+declare unit scale 0.01 (1 Blender unit = 1 cm) WITHOUT rescaling any numeric coordinate; report numeric_coordinates_changed=false, and record any removed presentation offset as a runtime requirement
 save to output dir; verify source hash unchanged; write manifest incl. height_policy
 ```
 

@@ -18,16 +18,16 @@ Modes the extractor needed (design them as separate sub-commands): `inspect` (li
 | Field | Why |
 |---|---|
 | `authoritativeSkeletonBones[]`: name, parentIndex, restTransform (translation, quaternion, scale) | bone set, parent-first order, rest pose for FBX patch and bind audit |
-| Mesh bone list (subset/superset of skeleton) | stock mesh had 557 of the skeleton's 1129 bones |
-| Sockets (name, bone, relative transform) | stock had 40; the weapon attaches by socket |
+| Mesh bone list (subset/superset of skeleton) | stock mesh used a subset of the shared skeleton's bones |
+| Sockets (name, bone, relative transform) | the weapon attaches by socket; record all of them |
 | Material slots (names, order) | material binding is by slot name |
 | Per-vertex influences (up to 8), all LODs | see below |
-| UV channels count | stock had 3 UV channels |
-| Dependency package list | stock mesh had 95 dependency packages; informs what to reference vs own |
+| UV channels count | record the stock count; keep it |
+| Dependency package list | informs what to reference vs own; expect a long list |
 | Animation: sequence paths, frame times, rate, root ("Trans") per-frame transforms, notifies, curves, flags | animation replacement needs exact timing/root |
 | Physics asset, kine-driver, bonamik (secondary motion) and effect references on the mesh | see docs/11 |
 
-Stock Cloud example counts (as tested): 1129 skeleton bones, 557 mesh bones, 40 sockets, 14 material slots, 196,160 LOD0 vertices, 3 UV channels, 6 LODs.
+Record counts per stock character in your private ledger (skeleton bones, mesh-influence bones, sockets, material slots, LOD0 vertices, UV channels, LOD count). Do not copy the numbers into this repo: they are extracted-game-derived values and are specific to one character and build. [GENERAL]
 
 ## Why not umodel / PSK [OBSERVED]
 

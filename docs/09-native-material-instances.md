@@ -39,7 +39,7 @@ Everything except Color must have `srgb = false`; assert `srgb is (param == "Col
 * Hash-check every retained bake before reading it; reject non-finite pixels; reject AO that is not constant 1 (otherwise the white-AO shortcut is wrong). [OBSERVED]
 * Material/texture identities: material path `/Game/<Mod>/Materials/M_<name>`, textures `/Game/<Mod>/Textures/<stem>`; names `[A-Za-z0-9_]`, ≤48 / ≤64 chars; refuse duplicates. [OBSERVED]
 * **Shared textures** across materials are allowed only if every sharer agrees on parameter+entry; otherwise fail. [OBSERVED]
-* Expect lots of bulk: 46 materials produced 188 texture packages and about 38 bulk chunks. [OBSERVED]
+* Expect lots of bulk: a few hundred packages and tens of bulk chunks for a full outfit (per-material texture sets dominate). [OBSERVED]
 
 ## Editor stage (unreal python, matched editor)
 

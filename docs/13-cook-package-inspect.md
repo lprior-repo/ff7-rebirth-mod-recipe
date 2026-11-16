@@ -18,8 +18,9 @@ Inputs: a saved candidate project that passed the saved-bind audit (docs/10), ru
 Editor commandlet under the matched editor + Proton (dedicated display, docs/02 P14):
 
 ```
-<editor> <project> -run=Cook -TargetPlatform=WindowsNoEditor \
-         -CookSinglePackageNoRefs -Map=<pkgA>+<pkgB>+... <extra flags your editor needs, e.g. unattended> 
+<editor> <project> -run=Cook -TargetPlatform=WindowsNoEditor -CookSinglePackageNoRefs \
+         -Map=<pkgA>+<pkgB>+... (sorted, '+'-joined) -abslog=<output>/Cook.log \
+         -NullRHI -unattended -NoSplash -NoSound -NoP4 -stdout -FullStdOutLogOutput -UTF8Output
 ```
 
 * `-CookSinglePackageNoRefs` cooks **only the named packages**, not their reference closure — essential, otherwise the cook drags in native game assets (skeleton, parent materials) that must not ship. `-Map` takes the whitelist `+`-joined and **sorted** (deterministic).

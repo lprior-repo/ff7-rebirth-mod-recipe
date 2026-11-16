@@ -23,4 +23,4 @@ for each material actually used:
 * **Colour space**: bake colours as sRGB; Normal/Roughness/Metallic as non-colour data. A 1×1 constant colour written without conversion is *linear* bytes and must be sRGB-encoded for a Color parameter (docs/09 P11).
 * **Normal maps**: confirm convention (green channel up/down) on the first test material; the native shader and Blender may differ. [GENERAL / untested here]
 * Refuse unsupported shader graphs rather than approximating; unsupported = a human decision.
-* Texture count: the observed model produced 188 texture packages for 46 material bindings — a lot of bulk data; share textures where possible. [OBSERVED]
+* Texture count: the observed model produced roughly four texture packages per material binding — a lot of bulk data; share textures where possible. [OBSERVED]
