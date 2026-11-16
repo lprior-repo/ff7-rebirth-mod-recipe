@@ -11,7 +11,7 @@
 
 * Keep **bone names/hierarchy/order** matching authority when reusing the shared skeleton.
 * Keep vertex-group names equal to bone names; weights normalized; ≤ 8 non-zero.
-* Budget: the observed model was ~557k vertices / ~1.04M triangles across 43 meshes — large; stock LOD0 was ~196k vertices. [OBSERVED numbers] A leaner model reduces risk and cook time. [INFERENCE]
+* Budget: the observed custom model was several times denser than the stock LOD0 (hundreds of thousands of vertices across dozens of meshes). A leaner model reduces risk and cook time. [OBSERVED order of magnitude; INFERENCE on risk]
 * If LOD matters, build LODs in Blender (decimate with weight preservation) and import as LOD chain (`import_mesh_lods=true` with named LOD meshes) — untested here. [INFERENCE]
 * **Morph targets/facial**: import was run with `import_morph_targets=false`; face deformation uses bones. The face mesh must keep native bone weights/UVs for facial animation to work. Bounded probes (docs/04) test it. [OBSERVED]
 * **Physics-driven secondary motion** (hair/skirt/chest) is *not* produced by skin weights: it is driven by native Bonamik/Kine data attached to the mesh and bone names (docs/11). New bones for cloth need new physics data — unobserved.
