@@ -1,0 +1,38 @@
+{
+  "_comment": "Template shape only. One file per in-game session. Status is a record, never an automatic pass.",
+  "schema_version": 1,
+  "status": "OBSERVED_INPUT_NOT_AN_AUTOMATIC_GAMEPLAY_PASS",
+  "label": "<A-Za-z0-9_- up to 80 chars>",
+  "run_id": "<unique run id>",
+  "candidate": "<candidate id>",
+  "receipt": "<exact receipt path/name>",
+  "release_hash": "<sha256 of release.json>",
+  "game_build_id": "<build id>",
+  "host_state_changes": [
+    {"what": "<service stopped>", "at": "<UTC timestamp>", "restored_at": "<UTC timestamp or null>", "restored_state_verified": false}
+  ],
+  "window": {"class": "steam_app_<appid>", "pid": 0, "address": "<compositor address>"},
+  "operations": [
+    {"seq": 1, "kind": "key|mouse|wait|capture", "arg": "<keysym/button/seconds>", "hold_s": 0, "exit_code": 0, "focus_verified": true, "at": "<UTC timestamp>"}
+  ],
+  "captures": [
+    {"file": "<label>-<runid>/window.png", "what": "<scene/pose/camera>"}
+  ],
+  "gates": [
+    {
+      "gate": "appearance|materials|deformation|grounding|locomotion|weapon_combat|secondary_physics|cutscene|face|stability|rollback",
+      "result": "OBSERVED_OK|OBSERVED_DEFECT|NOT_OBSERVED",
+      "evidence": "<capture file or note>",
+      "comment": "<what was seen, what was not>"
+    }
+  ],
+  "crash": {
+    "occurred": false,
+    "seconds_since_launch": null,
+    "seconds_since_last_input": null,
+    "signal": null,
+    "attribution": "UNATTRIBUTED|ATTRIBUTED_WITH_DISCRIMINATING_EXPERIMENT",
+    "artifacts": []
+  },
+  "unexpected": []
+}

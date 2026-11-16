@@ -1,0 +1,33 @@
+{
+  "_comment": "Template shape only. Replace every <placeholder>. Never commit a filled copy with real hashes/paths to a public place; keep filled copies in the private work tree.",
+  "schema_version": 1,
+  "release_id": "<mod>-<candidate>-<seq>",
+  "stage": "COOKED",
+  "package_kind": "<iostore_container_plus_provenance_pak>",
+  "game_build_id": "<steam build id the release was made for>",
+  "candidate": "<candidate id>",
+  "source_hash": "<sha256 of the approved authoring scene>",
+  "requires_plugins": [],
+  "files": [
+    {
+      "source": "<relative/path/in/release/dir/<Mod>_<candidate>_P.utoc>",
+      "destination": "End/Content/Paks/~mods/<Mod>_<candidate>_P.utoc",
+      "sha256": "<sha256>",
+      "bytes": 0
+    },
+    {
+      "source": "<relative/path/<Mod>_<candidate>_P.ucas>",
+      "destination": "End/Content/Paks/~mods/<Mod>_<candidate>_P.ucas",
+      "sha256": "<sha256>",
+      "bytes": 0
+    },
+    {
+      "source": "<relative/path/<Mod>_<candidate>_BuildInfo_P.pak>",
+      "destination": "End/Content/Paks/~mods/<Mod>_<candidate>_BuildInfo_P.pak",
+      "sha256": "<sha256>",
+      "bytes": 0
+    }
+  ],
+  "gameplay_verified": false,
+  "notes": "gameplay_verified becomes true only by a human decision after the in-game gate matrix (docs/15)."
+}

@@ -1,0 +1,18 @@
+# Recipe repo holds docs only. Never commit assets, extracted game data, models, textures, builds, saves, credentials.
+*.blend
+*.blend1
+*.fbx
+*.psk
+*.uasset
+*.uexp
+*.ubulk
+*.utoc
+*.ucas
+*.pak
+*.png
+*.jpg
+*.zip
+*.7z
+*.env
+.venv/
+build/

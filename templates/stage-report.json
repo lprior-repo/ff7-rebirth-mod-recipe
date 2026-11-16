@@ -1,0 +1,28 @@
+{
+  "_comment": "Template shape for every pipeline stage report. The next stage must read and re-verify this file; the stage's exit code is not the result.",
+  "schema_version": 1,
+  "stage": "<init|import|bind_audit|runtime|cook|package|inspect|...>",
+  "status": "PASS|FAIL|NOT_RUN|BLOCKED|NEEDS_ART_REVIEW",
+  "status_detail": "<precise status string, e.g. PREPARED_NOT_COOKED or PASS_..._NOT_RUNTIME>",
+  "candidate": "<candidate id>",
+  "output_dir": "<fresh immutable directory>",
+  "inputs": [
+    {"role": "<source_scene|metadata|previous_report|tool|project>", "path": "<relative>", "sha256": "<sha256>", "pinned_sha256": "<sha256 expected>", "match": true}
+  ],
+  "tool_versions": {"<tool>": "<version>"},
+  "outputs": [
+    {"path": "<relative>", "sha256": "<sha256>", "bytes": 0}
+  ],
+  "expected_outputs_match_actual": true,
+  "measurements": [
+    {"name": "<metric>", "value": 0.0, "tolerance": 0.0, "margin": 0.0, "pass": true}
+  ],
+  "excluded": ["<what was deliberately NOT produced/shipped>"],
+  "pending": [],
+  "failures": [],
+  "source_unchanged_proof": {"before": "<sha256>", "after": "<sha256>"},
+  "not_proven": ["<explicit limits of this status, e.g. appearance, UVs, runtime>"],
+  "reuse_proofs": [
+    {"parent": "<candidate id>", "path": "<relative>", "sha256_parent": "<sha256>", "sha256_copy": "<sha256>"}
+  ]
+}
